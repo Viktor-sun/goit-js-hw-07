@@ -8,16 +8,14 @@ const countCategories = references => {
 console.log(countCategories(categoriesItemsRef));
 
 const getTitleAndCountCategories = categories => {
-  let result;
-  //   const result = {};
+  let result = '';
   categories.forEach(item => {
-    // console.log(item);
     const title = item.firstElementChild.textContent;
     const value = item.lastElementChild.children;
-    const countCategories = [...value].length;
-    // result[title] = countCategories;
+    // const countCategories = [...value].length;
+    const countCategories = Array.from(value).length;
 
-    result += ` Категория: ${title}\n Количество элементов: ${countCategories}`;
+    result += `Категория: ${title}\nКоличество элементов: ${countCategories}\n`;
   });
   return result;
 };
