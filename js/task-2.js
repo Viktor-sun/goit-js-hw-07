@@ -13,8 +13,8 @@ const makeLiElement = text => {
   return liRef;
 };
 
+const ingredientsRef = document.querySelector('#ingredients');
 const result = ingredients.map(element => makeLiElement(element));
 
-const ingredientsRef = document.querySelector('#ingredients');
 ingredientsRef.append(...result);
-console.log(ingredientsRef);
+// console.log(ingredientsRef);

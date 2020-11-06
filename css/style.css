@@ -1,0 +1,46 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+#categories {
+  display: flex;
+}
+
+#categories > li:not(:last-child) {
+  margin-right: 60px;
+}
+
+/*Задача 3 */
+#gallery {
+  display: flex;
+  padding: 0;
+}
+
+#gallery > li {
+  list-style: none;
+}
+
+#gallery > li:not(:last-child) {
+  margin-right: 30px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Задача 6 */
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
