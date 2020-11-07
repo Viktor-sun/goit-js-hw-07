@@ -11,11 +11,9 @@ const getTitleAndCountCategories = categories => {
   let result = '';
   categories.forEach(item => {
     const title = item.firstElementChild.textContent;
-    const value = item.lastElementChild.children;
-    // const countCategories = [...value].length;
-    const countCategories = Array.from(value).length;
+    const value = item.lastElementChild.children.length;
 
-    result += `Категория: ${title}\nКоличество элементов: ${countCategories}\n`;
+    result += `Категория: ${title}\nКоличество элементов: ${value}\n`;
   });
   return result;
 };
