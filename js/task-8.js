@@ -3,8 +3,15 @@ const btnRender = document.querySelector('button[data-action="render"]');
 const btnDestroy = document.querySelector('button[data-action="destroy"]');
 const boxesRef = document.querySelector('#boxes');
 
+inputRef.addEventListener('keydown', onKeyDown);
 btnRender.addEventListener('click', () => createBoxes(inputRef.value));
 btnDestroy.addEventListener('click', destroyBoxes);
+
+function onKeyDown(event) {
+  if (event.code === 'Enter') {
+    createBoxes(inputRef.value);
+  }
+}
 
 function createBoxes(amount) {
   const arr = [];
