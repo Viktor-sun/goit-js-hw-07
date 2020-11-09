@@ -4,7 +4,8 @@ inputRef.addEventListener('change', onInputChange);
 
 function onInputChange(event) {
   const str = event.target.value;
-  if (str.length === 6) {
+  const inputLength = Number(event.target.dataset.length);
+  if (str.length === inputLength) {
     inputRef.classList.add('valid');
     inputRef.classList.remove('invalid');
   } else {

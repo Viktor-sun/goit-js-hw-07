@@ -1,11 +1,11 @@
 const inputRef = document.querySelector('#controls > input');
-const btnRender = document.querySelector('button[data-action="render"]');
-const btnDestroy = document.querySelector('button[data-action="destroy"]');
+const btnRenderRef = document.querySelector('button[data-action="render"]');
+const btnDestroyRef = document.querySelector('button[data-action="destroy"]');
 const boxesRef = document.querySelector('#boxes');
 
 inputRef.addEventListener('keydown', onKeyDown);
-btnRender.addEventListener('click', () => createBoxes(inputRef.value));
-btnDestroy.addEventListener('click', destroyBoxes);
+btnRenderRef.addEventListener('click', () => createBoxes(inputRef.value));
+btnDestroyRef.addEventListener('click', destroyBoxes);
 
 function onKeyDown(event) {
   if (event.code === 'Enter') {
