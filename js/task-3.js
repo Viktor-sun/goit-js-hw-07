@@ -1,3 +1,5 @@
+const galleryRef = document.getElementById('gallery');
+
 const images = [
   {
     url:
@@ -16,18 +18,25 @@ const images = [
   },
 ];
 
-const getLiElement = ({ url, alt }) => {
-  const li = document.createElement('li');
-  const img = document.createElement('img');
-  img.src = url;
-  img.alt = alt;
+// 1 вариант
+// const getLiElement = ({ url, alt }) => {
+//   const li = document.createElement('li');
+//   const img = document.createElement('img');
+//   img.src = url;
+//   img.alt = alt;
 
-  li.appendChild(img);
-  return li;
-};
+//   li.appendChild(img);
+//   return li;
+// };
 
-const result = images.map(obj => getLiElement(obj));
+// const result = images.map(obj => getLiElement(obj));
 
-const galleryRef = document.querySelector('#gallery');
-galleryRef.append(...result);
-// console.log(galleryRef);
+// galleryRef.append(...result);
+
+// 2 вариант
+const getLiElement = ({ url, alt }, element) =>
+  element.insertAdjacentHTML(
+    'beforeend',
+    `<li><img src="${url}" alt="${alt}"></li>`,
+  );
+const result = images.forEach(obj => getLiElement(obj, galleryRef));

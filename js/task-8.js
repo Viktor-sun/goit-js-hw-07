@@ -1,7 +1,7 @@
 const inputRef = document.querySelector('#controls > input');
 const btnRenderRef = document.querySelector('button[data-action="render"]');
 const btnDestroyRef = document.querySelector('button[data-action="destroy"]');
-const boxesRef = document.querySelector('#boxes');
+const boxesRef = document.getElementById('boxes');
 
 inputRef.addEventListener('keydown', onKeyDown);
 btnRenderRef.addEventListener('click', () => createBoxes(inputRef.value));
@@ -30,7 +30,13 @@ function createBoxes(amount) {
   boxesRef.append(...arr);
 }
 
+// 1 вариант
 function destroyBoxes() {
   const divs = boxesRef.children;
   [...divs].forEach(element => element.remove());
 }
+
+// 2 вариант
+// function destroyBoxes() {
+//   boxesRef.innerHTML = '';
+// }
