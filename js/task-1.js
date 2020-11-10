@@ -1,9 +1,7 @@
 const categoriesItemsRef = document.querySelectorAll('#categories > .item');
 
-const countCategories = references => {
-  const result = [...references].length;
-  return `В списке ${result} категории.`;
-};
+const countCategories = references =>
+  `В списке ${[...references].length} категории.`;
 
 console.log(countCategories(categoriesItemsRef));
 
