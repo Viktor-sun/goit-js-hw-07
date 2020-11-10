@@ -34,9 +34,9 @@ const images = [
 // galleryRef.append(...result);
 
 // 2 вариант
-const getLiElement = ({ url, alt }, element) =>
+const insertLiElement = ({ url, alt }, element) =>
   element.insertAdjacentHTML(
     'beforeend',
     `<li><img src="${url}" alt="${alt}"></li>`,
   );
-const result = images.forEach(obj => getLiElement(obj, galleryRef));
+const result = images.forEach(obj => insertLiElement(obj, galleryRef));
