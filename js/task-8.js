@@ -31,12 +31,12 @@ function createBoxes(amount) {
 }
 
 // 1 вариант
-function destroyBoxes() {
-  const divs = boxesRef.children;
-  [...divs].forEach(element => element.remove());
-}
+// function destroyBoxes() {
+//   const divs = boxesRef.children;
+//   [...divs].forEach(element => element.remove());
+// }
 
 // 2 вариант
-// function destroyBoxes() {
-//   boxesRef.innerHTML = '';
-// }
+function destroyBoxes() {
+  boxesRef.innerHTML = '';
+}
